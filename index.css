@@ -81,11 +81,14 @@
 }
 
 .history {
-
   color: rgba(255,255,255, 0.5);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: large;
+}
+
+.history span {
+  color: #FF4752;
 }
 
 .value {

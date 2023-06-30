@@ -19,10 +19,10 @@ $(document).ready(function() {
             const last = operation.length - 1;
 
             if ($(element).hasClass("number")) {
-                if (operation.length === 0) {
+                if (operation.length === 0 || isNaN(operation[last])) {
                     operation.push(value);
                     valueText.text(value);
-                } else if (!isNaN(operation[last])) {
+                } else {
                     operation[last] += value;
                     valueText.text(operation[last]);
                 }
@@ -32,6 +32,13 @@ $(document).ready(function() {
                 if(operation.length !== 0 && !isNaN(operation[last]) && !operation[last].includes(".")) {
                     operation[last] += value;
                     valueText.text(operation[last]);
+                }
+            }
+
+            if($(element).hasClass("operator")) {
+                if(!isNaN(operation[last])) {
+                    historyText.html(operation.join(' ') + " <span>" + value + "</span> ");
+                    operation.push(value);
                 }
             }
         })
