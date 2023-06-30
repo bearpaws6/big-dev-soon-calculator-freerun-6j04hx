@@ -3,12 +3,53 @@
   <head>
     <bds />
     <link rel="stylesheet" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/91c4f6d211.js" crossorigin="anonymous"></script>
     <title>BigDevSoon - Calculator Project</title>
   </head>
   <body>
     <!-- Place below is for your own exciting code -->
-    <p>Time to write some code! 👀</p>
+
+    <div class="calulator">
+      <div class="header">
+        <div>Calc</div>
+        <div class="toggleNight">
+          <i class="fa-regular fa-sun"></i>
+          <i class="fa-regular fa-moon"></i>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="history"></div>
+        <div class="value">0</div>
+      </div>
+      <div class="body">
+        <div class="button col1 row1 action">AC</div>
+        <div class="button col2 row1 action">C</div>
+        <div class="button col3 row1 modulo">%</div>
+        <div class="button col4 row1 operator">&#247;</div>
+
+        <div class="button col1 row2 number">7</div>
+        <div class="button col2 row2 number">8</div>
+        <div class="button col3 row2 number">9</div>
+        <div class="button col4 row2 operator">X</div>
+
+        <div class="button col1 row3 number">4</div>
+        <div class="button col2 row3 number">5</div>
+        <div class="button col3 row3 number">6</div>
+        <div class="button col4 row3 operator">-</div>
+
+        <div class="button col1 row4 number">1</div>
+        <div class="button col2 row4 number">2</div>
+        <div class="button col3 row4 number">3</div>
+        <div class="button col4 row4 operator">+</div>
+
+        <div class="button zeroButton row5 number">0</div>
+        <div class="button col3 row5 point">.</div>
+        <div class="button col4 row5 operator">=</div>
+      </div>
+    </div>
+
     <!-- Change the [ME] part to your own name/GitHub link -->
     <div class="footer">
       <a href="https://bigdevsoon.me" target="_blank" rel="noopener noreferrer"
